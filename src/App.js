@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import StartScreen from './components/StartScreen';
+import Instructions from './components/Instructions';
+import Quiz from './components/Quiz';
+import ThankYou from './components/Thank'; 
 
 function App() {
+  const [userName, setUserName] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<StartScreen onStart={(name) => setUserName(name)} />} />
+        <Route
+          path="/instructions"
+          element={
+            userName ? <Instructions userName={userName} /> : <Navigate to="/" />
+          }
+        />
+        <Route
+          path="/quiz"
+          element={
+            userName ? <Quiz userName={userName} /> : <Navigate to="/" />
+          }
+        />
+        <Route path="/thankyou" element={<ThankYou />} /> 
+      </Routes>
+    </Router>
   );
 }
 

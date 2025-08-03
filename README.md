@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Quiz App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a modern, interactive Quiz Application built with the MERN stack (MongoDB, Express, React, Node.js).
 
-## Available Scripts
+Users can enter their name, read instructions, take a 10-question quiz, and view detailed results with correct and incorrect answers highlighted.
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+### 🧑 User Flow & Interface
+- **User Name Input** — Enter name before starting the quiz
+- **Quiz Instructions Screen** — Clear guidance before starting
+- **Randomized Questions** — 10 questions shuffled on every attempt
+- **Multiple Choice UI** — Clickable options using Material UI
+- **Responsive & Styled** — Clean, mobile-friendly UI with Material UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ⏱️ Quiz Functionality
+- **2-Minute Timer** — Countdown from 2 minutes
+- **Auto-Submit on Timeout** — Automatically submits when time ends
+- **Answer Evaluation** — Calculates and displays final score
+- **Color-Coded Results**
+  - ✅ Correct: Green highlight
+  - ❌ Wrong: Red highlight
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📊 Data Tracking & Storage
+- **Stores User Name & Score** in MongoDB
+- **Stores Completed Time (IST)** in 12-hour format  
+  _Example: July 2, 2025, 01:26 PM (IST)_
+- **Tracks Duration Taken**
+  - If finished early: `"1.26 minutes"`
+  - If full time used: `"2 minutes"`
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🔐 Extra Protections
+- **Prevents Back Navigation** during the quiz
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Frontend: React, Material UI
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Others: React Router, useState/useEffect hooks
 
-### `npm run eject`
+## Installation & Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repository:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/your-username/your-github-repo-link.git
+cd your-github-repo-link
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Backend Setup
+1. cd backend
+2. npm install
+3. npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Frontend Setup
+1. cd frontend
+2. npm install
+3. npm start
 
-## Learn More
+## ✍️ Author
+- MADHAVI VALLABHANENI
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 License
+This project is publicly visible but is not open-source. Please do not reuse the code without permission.
