@@ -205,7 +205,7 @@ const Quiz = ({ userName }) => {
 
   const submitResults = async (name, currentScore, completedAt, timeTakenInSeconds) => {
     try {
-      await fetch('https://quiz-8cb6.onrender.com/api/quiz/submit', {
+      await fetch('https://quiz-4-t3j4.onrender.com/api/quiz/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, score: currentScore, completedAt, timeTakenInSeconds }),
